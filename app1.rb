@@ -2,7 +2,7 @@ def show_book book
        puts"==========================<br/>"
        book.keys.each do |key|
               age = book[key]
-              puts"Name: #{key}, Age: #{age} <br/>"
+              puts"<i>Name<i/>: #{key}, <i>Age</i>: <b>#{age}</b> <br/>"
           end
        puts"==========================<br/>"         
         end
