@@ -1,10 +1,10 @@
 def show_book book                      
-       puts"=========================="
+       puts"==========================<br/>"
        book.keys.each do |key|
               age = book[key]
-              puts"Name: #{key}, Age: #{age}"
+              puts"Name: #{key}, Age: #{age} <br/>"
           end
-       puts"=========================="                
+       puts"==========================<br/>"         
       end
    
 book1 = {"Anna" => 12, "Gus" => 23, "Lida" => 43}  
