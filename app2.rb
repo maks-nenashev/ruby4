@@ -8,7 +8,9 @@ end
 x = Animal.new
 x.run
 
-
-
 z = Animal.new
 z.run
+
+puts "Program finished. Press Enter to exit."
+gets
+
