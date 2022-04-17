@@ -15,7 +15,7 @@
               puts"Name: #{key}, Age: #{age}"
        end
       end
-    end
+     end
 
 m = Book.new
 m.add_person :name => "Walt", :age => 50
