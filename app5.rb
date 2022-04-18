@@ -1,4 +1,6 @@
  class Book
+     #atrebut attr_reader
+    attr_reader :last_person
 
     def initialize
     @hh = {}
@@ -16,9 +18,9 @@
               age = @hh[key]
               puts"Name: #{key}, Age: #{age}"
        end
-     def last_person
-        @last_person
-       end
+    # def last_person
+     #   @last_person       "attr_reader" 
+      # end
      end  
   end
 
