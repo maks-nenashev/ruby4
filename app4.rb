@@ -1,26 +1,28 @@
- class Book
-
- def initialize
- @hh = {}
-   end
-     
-     def add_person options       #dobowlenie pary w hash
-         puts"Already exists" if @hh[options[:name]] #<<<<<<Wazno!
-         @hh[options[:name]] = options[:age]  
-       end
-  
-     def show_all                   #pokazywaet hash    
-       @hh.keys.each do |key|
-              age = @hh[key]
-              puts"Name: #{key}, Age: #{age}"
-       end
+class Dog
+    
+    def make_up_name
+        @name = "Sandy"
       end
-     end
 
-m = Book.new
-m.add_person :name => "Walt", :age => 50
-m.show_all
+    def move(destination)#Parametr
+        puts"#{@name} runs to the #{destination}"
+      end
+    
+    def make_up_age
+        @age = 5
+      end
+
+    def report_age
+        puts"#{@name} is #{@age} years old!"
+      end
+    end
+
+    x = Dog.new
+x.make_up_name
+x.move("yard") #Parametr
+x.make_up_age
+x.report_age
 
 puts "Program finished. Press Enter to exit."
 gets
- 
+

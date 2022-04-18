@@ -1,37 +1,28 @@
- class Book
-     #atrebut attr_reader
-    attr_reader :last_person
+class Dog
+    
+    attr_accessor :name, :age
 
-    def initialize
-    @hh = {}
-    @last_person = ""
-      end
-     
-     def add_person options       #dobowlenie pary w hash
-        @last_person = options[:name]
-        puts"Already exists" if @hh[options[:name]] #<<<<<<Wazno!
-         @hh[options[:name]] = options[:age]  
-       end
-  
-     def show_all                   #pokazywaet hash    
-       @hh.keys.each do |key|
-              age = @hh[key]
-              puts"Name: #{key}, Age: #{age}"
-       end
-    # def last_person
-     #   @last_person       "attr_reader" 
-      # end
-     end  
-  end
+      def report_age
+        puts"#{@name} is #{@age} years old!"
+         end
+      
+      def move(destination)#Parametr
+        puts"#{@name} runs to the #{destination}"
+         end
+        end
 
-m = Book.new
-m.add_person :name => "Walt", :age => 50
-m.add_person :name => "Max",  :age => 15
-m.add_person :name => "Alex", :age => 12
-m.show_all
+x = Dog.new
+x.name = "Sally"
+x.age = 5
+x.move("yard") #Parametr
+x.report_age
 
-puts"last_person: #{m.last_person}"
+z = Dog.new
+z.name = "Bogu"
+z.age = 15
+z.move("home")
+z.report_age 
 
 puts "Program finished. Press Enter to exit."
 gets
- 
+
