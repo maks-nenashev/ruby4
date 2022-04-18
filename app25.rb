@@ -5,7 +5,7 @@
     def initialize
     @hh = {}
     @last_person = ""
-      end
+       end
      
      def add_person options       #dobowlenie pary w hash
         @last_person = options[:name]
