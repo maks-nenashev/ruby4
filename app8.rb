@@ -50,9 +50,9 @@ matrix << port2
 
 matrix.each do |port|
     puts "#{port.name}"
- #port2.plane.each do |plan|
-        ##puts "#{plan.model}"
-    #end
+ port.planes do |plan|
+        puts "#{plan.model}"
+    end
 end
 puts "Program finished. Press Enter to exit."
 gets
