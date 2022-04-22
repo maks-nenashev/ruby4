@@ -28,30 +28,31 @@ class Plane
          end  
        end
 matrix = []
-#Sozdaem Country
-country = Country.new "USA"
+
+country = Country.new "USA"#Sozdaem Country
 matrix << country
-#Sozdaem Airport
-port1 = Airport.new "Tokio"
-port2 = Airport.new "New York"
+
+port2 = Airport.new "New York"#Sozdaem Airport
 country.add_airport port2 #Dobowlaem w stranu aeroport
+
 #Sozdaem samolety
 plane1 = Plane.new "Boing-747"
 plane2 = Plane.new "A-320" 
+
 #Dobowlaem samolet w Airport
-port1.add_plane plane1 #Port1
-port1.add_plane plane2
 port2.add_plane plane1 #Port2
 port2.add_plane plane2
 
 
-
-matrix.each do |port|
-    puts "#{port.name}"
- #port.planes do |plan|
-        #puts "#{plan.model}"
-    #end
-end
+matrix.each do |country|
+        puts "#{country.name}"
+ country.airports.each do |port|
+        puts "#{port.name}"
+    port.planes.each do|plan|
+        puts"#{plan.models}"
+      end
+    end
+  end
 puts "Program finished. Press Enter to exit."
 gets
 
