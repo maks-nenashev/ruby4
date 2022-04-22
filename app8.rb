@@ -45,11 +45,11 @@ port2.add_plane plane2
 
 
 matrix.each do |country|
-        puts "#{country.name}"
+        puts "Country: #{country.name}"
  country.airports.each do |port|
-        puts "#{port.name}"
-    port.planes.each do|plan|
-        puts"#{plan.models}"
+        puts "Airport: #{port.name}"
+    port.planes.each_with_index do|plan,x|
+        puts"Planes:#{x+1} #{plan.models}"
       end
     end
   end
