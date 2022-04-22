@@ -20,18 +20,17 @@ class Airport
           @planes << plane
           end
         end
-
 class Plane
-    attr_reader :model
+    attr_reader :models
       
       def initialize(model)
-         @model = model  
+         @models = model  
          end  
        end
 matrix = []
 #Sozdaem Country
 country = Country.new "USA"
-
+matrix << country
 #Sozdaem Airport
 port1 = Airport.new "Tokio"
 port2 = Airport.new "New York"
@@ -45,14 +44,13 @@ port1.add_plane plane2
 port2.add_plane plane1 #Port2
 port2.add_plane plane2
 
-matrix << country
-matrix << port2
+
 
 matrix.each do |port|
     puts "#{port.name}"
- port.planes do |plan|
-        puts "#{plan.model}"
-    end
+ #port.planes do |plan|
+        #puts "#{plan.model}"
+    #end
 end
 puts "Program finished. Press Enter to exit."
 gets
