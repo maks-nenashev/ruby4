@@ -1,12 +1,12 @@
 module Humans #Modul
 
-    class Animal
-    def run
+class Animal
+     def self.run
         puts"Running!"
-      end
-    def jump
+       end
+     def jump
         puts"Jumping!"
-      end
+       end
     end
 class Cat < Animal
      def sey_meow
@@ -21,7 +21,7 @@ class Dog < Animal
    end
 max = Humans::Dog.new
 max.bark
-
+Humans::Animal.run
 
 puts "Program finished. Press Enter to exit."
 gets
