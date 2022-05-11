@@ -9,7 +9,7 @@ def bbb
 print"Enter method to call:"
 a = gets.strip
 
-send a
+send a #wyzow metoda po imeni
 
 puts "Program finished. Press Enter to exit."    
 gets
