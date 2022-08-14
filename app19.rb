@@ -1,7 +1,7 @@
 module Humans #Modul
 
 class Animal
-     def self.run
+     def self.run  #Metaprogramirowanie "method SELF"
         puts"Running!"
        end
      def jump
@@ -21,7 +21,7 @@ class Dog < Animal
    end
 max = Humans::Dog.new
 max.bark
-Humans::Animal.run
+Humans::Animal.run #Wizow metoda "SELF"
 
 puts "Program finished. Press Enter to exit."
 gets
